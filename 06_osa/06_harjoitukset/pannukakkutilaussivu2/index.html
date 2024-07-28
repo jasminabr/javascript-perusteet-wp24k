@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+    <title>Pancake tilaussivu</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Pancake tilaussivu</h1>
+      <form id="order-form">
+        <label for="customerName">Asiakkaan nimi :</label>
+        <input type="text" id="customerName" required /><br /><br />
+        <label for="type">Valitse pancake tyyli:</label>
+        <select id="type" required>
+          <option value="5">Klassinen - 5€</option>
+          <option value="6">Suklaa - 6€</option>
+          <option value="7">Mustikka - 7€</option>
+        </select>
+        <label>Valitse lisukkeet (1€ kukin):</label><br />
+        <div class="lis">
+          <input
+            type="checkbox"
+            id="topping-1"
+            value="1"
+            data-name="Nuts"
+            data-type="topping"
+          />
+          <label for="topping-1">Pähkinät</label>
+          <input
+            type="checkbox"
+            id="topping-2"
+            value="1"
+            data-name="Bananas"
+            data-type="topping"
+          />
+          <label for="topping-2">Banaani </label>
+          <input
+            type="checkbox"
+            id="topping-3"
+            value="1"
+            data-name="Syrup"
+            data-type="topping"
+          />
+          <label for="topping-3">Siirappi</label>
+        </div>
+        <br />
+        <label>Lisävaihtoehdot:</label> <br />
+        <div class="ex">
+          <input
+            type="checkbox"
+            id="extra-1"
+            value="2"
+            data-name="Whipped Cream"
+            data-type="extra"
+          />
+          <label for="extra-1">Kermavaahto - 2€</label><br />
+          <input
+            type="checkbox"
+            id="extra-2"
+            value="3"
+            data-name="Ice-cream"
+            data-type="extra"
+          />
+          <label for="extra-2">Jäätelö - 3€</label><br />
+        </div>
+        <input type="submit" value="Place Order" />
+      </form>
+      <div id="order-management-page">
+        <h2>Order List</h2>
+        <div id="order-list"></div>
+        <p id="total-price">Total Price: $0</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
